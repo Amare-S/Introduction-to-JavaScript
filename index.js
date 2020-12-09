@@ -58,10 +58,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
-
+console.log(multiply(12,3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +74,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+   return age + 7;
 }
-
+console.log(dogYears(7))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,10 +107,30 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if( weight <= 5 && age >= 1){
+     return weight * .05;
+    }
+    else if( weight <= 6 && weight <= 10 && age >= 1){
+      return weight * .04;
+    }
+    else if( (weight <= 11 && weight <= 15 && age >=1){
+      return weight * .03;
+    }
+    else if( (weight >= 15 && age >=1 ){
+      return weight * .02;
+    }
+    else if( age >= 2/12 && age <= 4/12 ){
+      return weight * .1;
+    }
+    else if( age >= 4/12 && age <= 7/12 ){
+      return weight * .05;
+    }
+    else if( age >= 7/12 && age <= 12/12 ){
+      return weight * .04;
+    }
   }
-
+console.log(hungryDog(5))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -135,8 +155,52 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+  var rng = Math.floor(Math.random() * 3);
+  let result = 'rock'; 
+  if (computer === 0) {
+  result = 'rock';
+  } else if (computer === 1) {
+  result = 'paper';
+  } else if (computer === 2) {
+  result = 'scissors';
+  }
+  switch (user) {
+  case 'rock':
+  if (result === 'rock') {
+  console.log("it's a tie");
+  } else if (result === 'paper') {
+  console.log('you loose!');
+  } else if (result === 'scissors') {
+  console.log('you win!');
+  }
+  break;
+  case 'paper':
+  if (result === 'rock') {
+  console.log("you win!");
+  } else if (result === 'paper') {
+  console.log("it's a tie");
+  } else if (result === 'scissors') {
+  console.log('you loose!');
+  }
+  break;
+  case 'scissors':
+  if (result === 'rock') {
+  console.log("you loose!");
+  } else if (result === 'paper') {
+  console.log('you win!');
+  } else if (result === 'scissors') {
+  console.log("it's a tie");
+  }
+  break;
+  default:
+  console.log("You must enter 'rock', 'paper' or 'scissors'")
+  break;
+  }
+  }
+  game("paper", rng);
 }
+
+  
   
   
 
@@ -151,8 +215,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(KM, miles){
+    return km * 0.6214
   }
 
 
@@ -165,9 +229,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(feet to cm){
+  return feet * 30.48
   }
+  console.log(feet, cm(3,30.48));
  
 
 
@@ -181,8 +246,8 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(bottles){
+        
   }
 
 
